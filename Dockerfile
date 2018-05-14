@@ -42,7 +42,7 @@ RUN set -ex \
 # Configure
 # =========
 # httpd confs
-COPY httpd-wordpress.conf $HTTPD_CONF_DIR/
+# COPY httpd-wordpress.conf $HTTPD_CONF_DIR/
 
 RUN set -ex \
 	##
@@ -54,7 +54,7 @@ RUN set -ex \
 # final
 # =====
 COPY wp.tar.gz $WORDPRESS_SOURCE/
-COPY wp-config.php $WORDPRESS_SOURCE/
+# COPY wp-config.php $WORDPRESS_SOURCE/
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
